@@ -2,7 +2,7 @@
   "name": "navjivan-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/Shubhpatel619/navjivan-app.git",
+ "homepage": "https://shubhpatel619.github.io/navjivan-app",
   "type": "module",
   "scripts": {
     "dev": "vite",
