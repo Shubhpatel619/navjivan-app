@@ -63,7 +63,7 @@ const Gallery = () => {
       </div>
 
       <section className="section container">
-        <div className="gallery-controls">
+        {/* <div className="gallery-controls">
           <label className="btn btn-accent upload-btn glass">
             <FaUpload style={{ marginRight: '8px' }} /> Upload New Photo
             <input 
@@ -73,7 +73,7 @@ const Gallery = () => {
               style={{ display: 'none' }} 
             />
           </label>
-        </div>
+        </div> */}
 
         <div className="gallery-grid">
           {photos.map(photo => (
