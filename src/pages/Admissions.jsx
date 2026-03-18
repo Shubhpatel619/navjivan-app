@@ -1,10 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './PageStyles.css';
 
 const Admissions = () => {
-  const handleSubmit = (e) => {
+  const [formData, setFormData] = useState({
+    "Guardian Name": '',
+    "Child's Name": '',
+    "Grade Applying For": '',
+    "Email Address": '',
+    "Contact Number": '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Thank you for your interest! We will contact you shortly.');
+    try {
+      const response = await fetch('http://localhost:3000/api/inquiry', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Thank you for your inquiry! We will contact you shortly.');
+        setFormData({
+          "Guardian Name": '',
+          "Child's Name": '',
+          "Grade Applying For": '',
+          "Email Address": '',
+          "Contact Number": '',
+        });
+      } else {
+        const errorData = await response.json();
+        alert(`Submission failed: ${errorData.message}`);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      if (error instanceof TypeError && error.message === 'Failed to fetch') {
+        alert('Server not responding. Please make sure the server is running.');
+      } else {
+        alert('An error occurred while submitting the form. Please try again.');
+      }
+    }
   };
 
   return (
@@ -62,15 +104,15 @@ const Admissions = () => {
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="form-group">
                 <label>Parent/Guardian Name</label>
-                <input type="text" required placeholder="John Doe" />
+                <input type="text" name="Guardian Name" value={formData['Guardian Name']} onChange={handleChange} required placeholder="John Doe" />
               </div>
               <div className="form-group">
                 <label>Child's Name</label>
-                <input type="text" required placeholder="Jane Doe" />
+                <input type="text" name="Child's Name" value={formData["Child's Name"]} onChange={handleChange} required placeholder="Jane Doe" />
               </div>
               <div className="form-group">
                 <label>Grade Applying For</label>
-                <select required>
+                <select name="Grade Applying For" value={formData['Grade Applying For']} onChange={handleChange} required>
                   <option value="">Select Grade</option>
                   <option value="kg">Kindergarten</option>
                   <option value="1-5">Primary (1 - 5)</option>
@@ -80,11 +122,11 @@ const Admissions = () => {
               </div>
               <div className="form-group">
                 <label>Email Address</label>
-                <input type="email" required placeholder="john@example.com" />
+                <input type="email" name="Email Address" value={formData['Email Address']} onChange={handleChange} required placeholder="john@example.com" />
               </div>
               <div className="form-group">
                 <label>Contact Number</label>
-                <input type="tel" required placeholder="+91 9876543210" />
+                <input type="tel" name="Contact Number" value={formData['Contact Number']} onChange={handleChange} required placeholder="+91 9876543210" />
               </div>
               <button type="submit" className="btn btn-primary w-100">Submit Inquiry</button>
             </form>
