@@ -14,7 +14,7 @@ const Hero = () => {
         </p>
         <div className="hero-btns">
           <Link to="/admissions" className="btn btn-accent hero-btn">
-            Apply Now
+            Apply Now For Admission
           </Link>
           <Link to="/about" className="btn btn-primary hero-btn">
             Discover More

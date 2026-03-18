@@ -5,6 +5,7 @@ import './App.css';
 // Layout Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 // Pages
 import Home from './pages/Home';
@@ -16,6 +17,7 @@ import Gallery from './pages/Gallery';
 function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <Navbar />
       <main style={{ flex: 1 }}>
         <Routes>

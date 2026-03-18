@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import FeatureCard from '../components/FeatureCard';
 import { FaBookReader, FaChalkboardTeacher, FaBasketballBall, FaGlobe } from 'react-icons/fa';
@@ -63,7 +64,7 @@ const Home = () => {
         <div className="container cta-section glass">
           <h2>Ready to Begin the Journey?</h2>
           <p>Join the Navjivan family and give your child the gift of a superior education.</p>
-          <a href="/admissions" className="btn btn-primary mt-4">Learn About Admissions</a>
+          <Link to="/admissions" className="btn btn-primary mt-4">Learn About Admissions</Link>
         </div>
       </section>
     </div>
