@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './PageStyles.css';
+import './pages.css';
 
 const Admissions = () => {
   const [formData, setFormData] = useState({

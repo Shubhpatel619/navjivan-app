@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './PageStyles.css';
-import './Gallery.css';
+import './pages.css';
 import { FaTimes, FaUpload } from 'react-icons/fa';
 
 const Gallery = () => {

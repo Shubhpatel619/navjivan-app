@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import FeatureCard from '../components/FeatureCard';
 import { FaBookReader, FaChalkboardTeacher, FaBasketballBall, FaGlobe } from 'react-icons/fa';
-import './Home.css';
+import './pages.css';
 
 const Home = () => {
   const features = [

@@ -1,5 +1,5 @@
 import React from 'react';
-import './FeatureCard.css';
+import './components.css';
 
 const FeatureCard = ({ icon, title, description }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaPlay, FaTimes } from 'react-icons/fa';
-import './PageStyles.css';
+import './pages.css';
 
 const Photos = () => {
   const { eventId } = useParams();

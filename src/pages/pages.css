@@ -1,0 +1,489 @@
+/* =========================================
+   HOME PAGE START
+   ========================================= */
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.title-underline {
+  width: 80px;
+  height: 4px;
+  background-color: var(--accent);
+  margin: 0 auto 1.5rem auto;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.bg-white {
+  background-color: var(--bg-white);
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.cta-section {
+  padding: 4rem 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--accent);
+}
+
+.cta-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+/* =========================================
+   HOME PAGE STOP
+   ========================================= */
+
+/* =========================================
+   GENERAL FILE STYLES START
+   ========================================= */
+.page-wrapper {
+  min-height: calc(100vh - 80px - 300px); /* Adjust for navbar and footer height */
+}
+
+.page-header {
+  background-color: var(--primary);
+  color: var(--bg-white);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.admissions-header {
+  background: linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.8)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=1920') center/cover;
+}
+
+.contact-header {
+  background: linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1920') center/cover;
+}
+
+.page-header h1 {
+  color: var(--bg-white);
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2rem;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.gap-lg {
+  gap: 4rem;
+}
+
+.title-underline-left {
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+}
+/* =========================================
+   GENERAL FILE STYLES STOP
+   ========================================= */
+
+/* =========================================
+   ABOUT PAGE START
+   ========================================= */
+/* About specific */
+.about-text p {
+  margin-bottom: 1.2rem;
+  color: var(--text-main);
+  font-size: 1.1rem;
+}
+
+.about-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.vision-box, .primary-box {
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  height: 100%;
+}
+
+.primary-box {
+  background-color: var(--primary);
+  color: var(--bg-white);
+  box-shadow: var(--shadow-lg);
+}
+
+.primary-box h3, .vision-box h3 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.primary-box h3 {
+  color: var(--accent);
+}
+/* =========================================
+   ABOUT PAGE STOP
+   ========================================= */
+
+/* =========================================
+   CONTACT & ADMISSIONS SHARED START
+   ========================================= */
+/* Forms */
+.contact-form .form-group {
+  margin-bottom: 1.2rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--primary-light);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  background-color: var(--bg-white);
+  transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* Admissions Steps */
+.steps-list {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.steps-list li {
+  display: flex;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  background-color: var(--primary);
+  color: var(--accent);
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-md);
+}
+
+.steps-list h4 {
+  margin-bottom: 0.3rem;
+  color: var(--primary);
+}
+
+.steps-list p {
+  color: var(--text-muted);
+}
+
+.inquiry-form-container {
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.inquiry-form-container h3 {
+  margin-bottom: 0.5rem;
+}
+
+.inquiry-form-container > p {
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+}
+/* =========================================
+   CONTACT & ADMISSIONS SHARED STOP
+   ========================================= */
+
+/* =========================================
+   CONTACT PAGE SPECIFIC START
+   ========================================= */
+/* Contact Specific */
+.contact-card {
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: var(--transition);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(10, 37, 64, 0.05);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.contact-card h4 {
+  margin-bottom: 0.3rem;
+}
+
+.contact-card p {
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+/* =========================================
+   CONTACT PAGE SPECIFIC STOP
+   ========================================= */
+
+/* =========================================
+   GALLERY & PHOTOS PAGE START
+   ========================================= */
+/* =========================
+   Gallery & Photos Styles
+   ========================= */
+
+.gallery-header {
+  background: linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.8)), url('https://images.unsplash.com/photo-1498677231914-50fff6bb000b?auto=format&fit=crop&q=80&w=1920') center/cover;
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+.upload-btn {
+  cursor: pointer;
+}
+
+/* Gallery Original Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  background-color: var(--bg-white);
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-img-container {
+  height: 250px;
+  overflow: hidden;
+}
+
+.gallery-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img-container img {
+  transform: scale(1.05);
+}
+
+.gallery-title {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary);
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Dense Photos Grid (Google Photos style) */
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-auto-rows: 120px;
+  gap: 4px;
+  width: 100%;
+}
+
+.photos-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+}
+
+.photos-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photos-item:hover img {
+  transform: scale(1.03);
+}
+
+.video-overlay-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+}
+
+/* Lightbox styles (Shared) */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(10, 37, 64, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox img,
+.lightbox video {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: var(--radius-md);
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 2.5rem;
+  color: var(--bg-white);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: var(--transition);
+}
+
+.close-lightbox:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+/* =========================================
+   GALLERY & PHOTOS PAGE STOP
+   ========================================= */
+
+/* =========================================
+   GLOBAL MEDIA QUERIES
+   ========================================= */
+@media screen and (max-width: 768px) {
+  .grid-2-col {
+    grid-template-columns: 1fr;
+  }
+}
