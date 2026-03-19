@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './PageStyles.css';
 import './Gallery.css';
 import { FaTimes, FaUpload } from 'react-icons/fa';
 
 const Gallery = () => {
+  const navigate = useNavigate();
+
   // Mock initial photos
   const [photos, setPhotos] = useState([
     {
@@ -77,7 +80,7 @@ const Gallery = () => {
 
         <div className="gallery-grid">
           {photos.map(photo => (
-            <div key={photo.id} className="gallery-item glass" onClick={() => setSelectedImg(photo.url)}>
+            <div key={photo.id} className="gallery-item glass" onClick={() => navigate(`/gallery/photos/${photo.id}`)}>
               <div className="gallery-img-container">
                 <img src={photo.url} alt={photo.title} loading="lazy" />
               </div>
